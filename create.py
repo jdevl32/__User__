@@ -6,9 +6,7 @@
 """
 
 import argparse
-import getopt
 import os
-# import platform
 import sys
 
 from itertools import starmap
