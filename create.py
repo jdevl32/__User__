@@ -33,14 +33,6 @@ class _ArgNamespace:
     ...
     """
 
-    # def __init__(self):
-    #     self._prompt = False
-
-    # @property
-    # def _noPromptText(self):
-    #     return common.isNull(self.prompt)
-
-    # @property
     def doPrompt(self):
         """
         ...
@@ -48,7 +40,6 @@ class _ArgNamespace:
         :rtype: bool
         """
 
-        # return self._prompt
         return self.p or not common.isNull(self.prompt)
 
     def getArgs(self, arg):
@@ -62,7 +53,6 @@ class _ArgNamespace:
 
         return [(*argt, self.force, self.remove) for argt in arg]
 
-    # @property
     def getPrompt(self):
         """
         ...
@@ -127,14 +117,11 @@ def _create(rootPath, profileDirName, targetDirName, forceCreate=False, removeOn
     elif removeOnly:
         common.trace\
             (
-                # "Path"
                 tag=None
                 ,
                 descriptor=common.formatTraceString(linkPath)
                 ,
                 value="does not exist (cannot remove)!"
-                # ,
-                # tds=" "
                 ,
                 dvs=" "
             )
